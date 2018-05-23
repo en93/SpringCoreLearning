@@ -12,6 +12,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.junit.contrib.java.lang.system.SystemOutRule;
 import config.myPlayer;
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Autowired;
+
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -27,6 +30,7 @@ public class MediaPlayerTest{
 	private myPlayer player;
 	
 	@Autowired
+	@Qualifier("advert")
 	private List<String> advertisers;
 	
 	@Test
@@ -51,12 +55,12 @@ public class MediaPlayerTest{
 		assertEquals(advertisers.size(), 4);
 	}
 	
-//	@Test
-//	public void advertisersRightValues() {
-//		assertEquals(advertisers.get(0), "Add-1");
-//		assertEquals(advertisers.get(1), "Add-2");
-//		assertEquals(advertisers.get(2), "Add-3");
-//		assertEquals(advertisers.get(3), "42");
-//	}
+	@Test
+	public void advertisersRightValues() {
+		assertEquals(advertisers.get(0), "Add-1");
+		assertEquals(advertisers.get(1), "Add-2");
+		assertEquals(advertisers.get(2), "Add-3");
+		assertEquals(advertisers.get(3), "42");
+	}
 	
 }

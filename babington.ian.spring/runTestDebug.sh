@@ -1,0 +1,1 @@
+mvn clean compile -Dmaven.surefire.debug test -e

@@ -7,17 +7,20 @@ import java.util.List;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 @Configuration
 public class AppConfig{
-	
+
 	@Bean
+	@Qualifier("advert")
 	public List<String> advertisers(int number) {
-		List<String> list = new ArrayList<String>();		
+		List<String> list = new ArrayList<String>();
 		list.add(add1());
 		list.add(add2());
 		list.add(add3());
-		list.add(String.valueOf(number));		
+		list.add(String.valueOf(number));
 		return list;
 	}
 	
@@ -35,7 +38,7 @@ public class AppConfig{
 	public String add3() {
 		return("Add-3");		
 	}
-	
+
 	@Bean 
 	public int myNumber() {
 		return 42;

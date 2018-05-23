@@ -6,8 +6,8 @@ import JavaConfig.babington.ian.spring.AudioMediaFile;
 @Configuration
 public class myEbook implements AudioMediaFile {
 	
-	String narrator = "Doors of Ghosts";
-	String title = "Mark Stone";
+	String narrator = "Mark Stone"; 
+	String title = "Doors of Ghosts";
 	String creator = "John Sand";
 
 	@Override

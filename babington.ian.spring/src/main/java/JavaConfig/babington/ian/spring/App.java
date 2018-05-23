@@ -1,8 +1,8 @@
 package JavaConfig.babington.ian.spring;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import java.util.List;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import config.myPlayer;
-//import config.AwesomePlayerWithTrack;
 
 public class App 
 {
@@ -10,16 +10,14 @@ public class App
     	
     	//Loads beans from application context and shows they work
         MediaPlayer mp;
-//        AwesomePlayerWithTrack ap;
+        List<String> stuff;
         try(AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(myPlayer.class)){
         	mp = ctx.getBean(MediaPlayer.class);
-//        	ap = ctx.getBean(AwesomePlayerWithTrack.class);
-        }        
-        
+        	stuff = (List<String>) ctx.getBean("advertisers");
+        }              
         mp.playMediaInfo();
         mp.playMedia();
-//
-//        ap.playMediaInfo();
-//        ap.playMedia();        
+        
+        System.out.println("List of size: " + stuff.size());
     }
 }

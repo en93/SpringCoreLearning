@@ -1,3 +1,3 @@
 Rem Run from directory containing pom to execute project
 
-mvn test
+mvn clean compile test -e

@@ -1,3 +1,49 @@
+//This package will use explicit java wiring
+
+package config;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class AppConfig{
+	
+	@Bean
+	public List<String> advertisers(int number) {
+		List<String> list = new ArrayList<String>();		
+		list.add(add1());
+		list.add(add2());
+		list.add(add3());
+		list.add(String.valueOf(number));		
+		return list;
+	}
+	
+	@Bean
+	public String add1() {
+		return("Add-1");		
+	}
+	
+	@Bean
+	public String add2() {
+		return("Add-2");		
+	}
+	
+	@Bean
+	public String add3() {
+		return("Add-3");		
+	}
+	
+	@Bean 
+	public int myNumber() {
+		return 42;
+	}
+	
+}
+
+
 //package config;
 //
 //import org.springframework.beans.factory.annotation.Qualifier;

@@ -8,9 +8,9 @@ import org.springframework.beans.factory.annotation.Qualifier;
 @Configuration
 public class myPodcast implements AudioMediaFile{
 	
-	String presenter = "RadioRock";
-	String title = "BNYC Studios";
-	String creator = "Steve Red";
+	String presenter = "Steve Red";
+	String title = "RadioRock";
+	String creator = "BNYC Studios"; 
 
 	@Override
 	public String getInfo() {

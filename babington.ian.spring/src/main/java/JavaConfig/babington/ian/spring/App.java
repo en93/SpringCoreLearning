@@ -2,15 +2,13 @@ package JavaConfig.babington.ian.spring;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import config.AppConfig;
+import config.AwesomePlayerWithTrack;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
-    public static void main( String[] args )
-    {
+    public static void main( String[] args ){
+    	
+    	//Loads beans from application context and shows they work
         MediaPlayer mp;
         AwesomePlayerWithTrack ap;
         try(AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class, AwesomePlayerWithTrack.class)){

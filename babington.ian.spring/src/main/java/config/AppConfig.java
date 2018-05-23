@@ -33,9 +33,4 @@ public class AppConfig {
 		Ebook myEbook = new Ebook("Doors of Ghosts", "Mark Stone", "John Sand");
 		return myEbook ;		
 	} 
-	
-
-	
-
-
 }

@@ -1,4 +1,9 @@
 Must use:
 
-Java configuration using annotations
+Java configured 
 Component scanning 
+Primary beans
+Qualified beans
+Autowiring
+Java wiring
+testing

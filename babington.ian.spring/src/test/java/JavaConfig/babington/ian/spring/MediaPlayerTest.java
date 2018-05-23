@@ -13,7 +13,6 @@ import org.junit.contrib.java.lang.system.SystemOutRule;
 import config.myPlayer;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.annotation.Autowired;
 
 
 

@@ -1,0 +1,4 @@
+Must use:
+
+Java configuration using annotations
+Component scanning 

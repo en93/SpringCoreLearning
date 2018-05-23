@@ -7,21 +7,21 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import config.AwesomePlayerWithTrack;
+import config.myPlayer;
 
 import org.springframework.test.context.ContextConfiguration;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes=AwesomePlayerWithTrack.class)
+@ContextConfiguration(classes=myPlayer.class)
 public class MediaPlayerTest{
 	
 	@Autowired
-	private AwesomePlayerWithTrack awesomePlayer;
+	private myPlayer player;
 	
 	@Test
 	public void AwesomePlayerNotNull() {
-		assertNotNull(awesomePlayer);
+		assertNotNull(player);
 	}
 
 }

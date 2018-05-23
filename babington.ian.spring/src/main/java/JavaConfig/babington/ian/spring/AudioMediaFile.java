@@ -1,15 +1,19 @@
 package JavaConfig.babington.ian.spring;
 
-public abstract class AudioMediaFile {
-	String title;
-	String creator;
+public interface AudioMediaFile {
 	
-	public AudioMediaFile(String title, String creator) {
-		this.title = title;
-		this.creator = creator;
-	}
-
-	public String getInfo() {
-		return "Playing " + title + " by " + creator + ".";
-	}	
+	public String getInfo();
+	public String play();
+	
+//	public String title;
+//	public String creator;
+//	
+//	public AudioMediaFile(String title, String creator) {
+//		this.title = title;
+//		this.creator = creator;
+//	}
+//
+//	public String getInfo() {
+//		return 
+//	}	
 }

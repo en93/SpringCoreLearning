@@ -27,10 +27,40 @@ public class MediaPlayerTest{
 	public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
 	
 	@Autowired
+	@Qualifier("myMediaPlayer")
 	private myPlayer player;
 	
+	
+	
+	
+	
+	
 	@Resource(name="advert")
+//	@Autowired
+//	@Qualifier("advert")
 	private List<String> advertisers;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	@Test
 	public void advertisersNotNull() {

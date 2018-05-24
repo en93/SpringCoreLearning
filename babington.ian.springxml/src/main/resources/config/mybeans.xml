@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	xmlns:util="http://www.springframework.org/schema/util"
-	xmlns:context="http://www.springframework.org/schema/context"	
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
 						http://www.springframework.org/schema/beans/spring-beans.xsd
 						http://www.springframework.org/schema/util
@@ -15,6 +14,10 @@
 
 	<bean id="myMediaPlayer" class="JavaConfig.babington.ian.spring.myPlayer">
 		<property name="file" ref="newPodcast" />
+	</bean>
+
+	<bean id="myMediaPlayerSecond" class="JavaConfig.babington.ian.spring.myPlayer">
+		<property name="file" ref="newEbook" />
 	</bean>
 
 	<bean id="newEbook" class="JavaConfig.babington.ian.spring.myEbook" />
@@ -43,7 +46,7 @@
 	<bean id="myNumber" class="java.lang.String">
 		<constructor-arg value="42" />
 	</bean>
-	
+
 	<bean id="doNotUse" class="java.lang.String">
 		<constructor-arg value="99" />
 	</bean>

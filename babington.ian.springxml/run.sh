@@ -1,1 +1,1 @@
-mvn clean compile exec:java -Dexec.mainClass="JavaConfig.babington.ian.spring.App" -e
+mvn clean compile exec:java -Dexec.mainClass="JavaConfig.babington.ian.spring.App"

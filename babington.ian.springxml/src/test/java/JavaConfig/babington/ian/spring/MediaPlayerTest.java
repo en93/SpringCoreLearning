@@ -31,11 +31,13 @@ public class MediaPlayerTest{
 	private myPlayer player;
 	
 	@Resource(name="advert")
+//	@Autowired
+//	@Qualifier("myMediaPlayer")
 	private List<String> advertisers;
 		
 	@Test
 	public void advertisersNotNull() {
-		assertNotNull(advertisers);		
+		assertNotNull(advertisers);
 	}
 	
 	@Test
@@ -54,7 +56,7 @@ public class MediaPlayerTest{
 	public void advertisersRightLength() {
 		assertEquals(advertisers.size(), 4);
 	}
-	
+
 	@Test
 	public void advertisersRightValues() {
 		assertEquals(advertisers.get(0), "Add-1");

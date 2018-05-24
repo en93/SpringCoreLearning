@@ -16,7 +16,7 @@
 		<property name="file" ref="newPodcast" />
 	</bean>
 
-	<bean id="myMediaPlayerSecond" class="JavaConfig.babington.ian.spring.myPlayer">
+	<bean id="myMediaPlayerSecond" class="JavaConfig.babington.ian.spring.myPlayer" primary="true">
 		<property name="file" ref="newEbook" />
 	</bean>
 

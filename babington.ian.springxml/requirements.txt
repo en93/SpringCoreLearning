@@ -1,9 +1,0 @@
-Must use:
-
-Java configured 
-Component scanning 
-Primary beans
-Qualified beans
-Autowiring
-Java wiring
-testing

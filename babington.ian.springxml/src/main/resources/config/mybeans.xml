@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/util
+						http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+
+	<bean id="myMediaPlayer" class="JavaConfig.babington.ian.spring.myPlayer">
+		<property name="file" ref="newPodcast" />
+	</bean>
+
+	<bean id="newEbook" class="JavaConfig.babington.ian.spring.myEbook" />
+
+	<bean id="newPodcast" class="JavaConfig.babington.ian.spring.myPodcast" />
+
+	<util:list id="advert" value-type="java.lang.String">
+		<ref bean="add1"/>
+		<ref bean="add2"/>
+		<ref bean="add3"/>
+		<ref bean="myNumber"/>
+	</util:list>
+
+	<bean id="add1" class="java.lang.String">
+		<constructor-arg value="Add-1" />
+	</bean>
+
+	<bean id="add2" class="java.lang.String">
+		<constructor-arg value="Add-2" />
+	</bean>
+
+	<bean id="add3" class="java.lang.String">
+		<constructor-arg value="Add-3" />
+	</bean>
+	
+	<bean id="myNumber" class="java.lang.Integer">
+		<constructor-arg value="42" />
+	</bean>
+
+
+</beans>

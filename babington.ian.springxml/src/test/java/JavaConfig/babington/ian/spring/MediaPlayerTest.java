@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import java.util.List;
 
+import javax.annotation.Resource;
+
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,7 +18,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes=myPlayer.class)
+@ContextConfiguration("classpath:config/mybeans.xml")
 public class MediaPlayerTest{
 	
 	final String newLine = System.lineSeparator();
@@ -27,8 +29,7 @@ public class MediaPlayerTest{
 	@Autowired
 	private myPlayer player;
 	
-	@Autowired
-	@Qualifier("advert")
+	@Resource(name="advert")
 	private List<String> advertisers;
 	
 	@Test

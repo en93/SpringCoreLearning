@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context"	
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
 						http://www.springframework.org/schema/beans/spring-beans.xsd
 						http://www.springframework.org/schema/util
-						http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+						http://www.springframework.org/schema/util/spring-util-2.5.xsd
+						http://www.springframework.org/schema/context
+						http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+	<context:annotation-config />
+
 
 	<bean id="myMediaPlayer" class="JavaConfig.babington.ian.spring.myPlayer">
 		<property name="file" ref="newPodcast" />
@@ -15,10 +22,10 @@
 	<bean id="newPodcast" class="JavaConfig.babington.ian.spring.myPodcast" />
 
 	<util:list id="advert" value-type="java.lang.String">
-		<ref bean="add1"/>
-		<ref bean="add2"/>
-		<ref bean="add3"/>
-		<ref bean="myNumber"/>
+		<ref bean="add1" />
+		<ref bean="add2" />
+		<ref bean="add3" />
+		<ref bean="myNumber" />
 	</util:list>
 
 	<bean id="add1" class="java.lang.String">
@@ -32,9 +39,13 @@
 	<bean id="add3" class="java.lang.String">
 		<constructor-arg value="Add-3" />
 	</bean>
-	
-	<bean id="myNumber" class="java.lang.Integer">
+
+	<bean id="myNumber" class="java.lang.String">
 		<constructor-arg value="42" />
+	</bean>
+	
+	<bean id="doNotUse" class="java.lang.String">
+		<constructor-arg value="99" />
 	</bean>
 
 

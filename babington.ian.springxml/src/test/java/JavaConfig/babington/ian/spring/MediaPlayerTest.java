@@ -30,38 +30,9 @@ public class MediaPlayerTest{
 	@Qualifier("myMediaPlayer")
 	private myPlayer player;
 	
-	
-	
-	
-	
-	
 	@Resource(name="advert")
-//	@Autowired
-//	@Qualifier("advert")
 	private List<String> advertisers;
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		
 	@Test
 	public void advertisersNotNull() {
 		assertNotNull(advertisers);		

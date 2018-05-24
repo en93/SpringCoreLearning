@@ -36,7 +36,7 @@ public class MediaPlayerTest{
 	private List<String> advertisers;
 		
 	@Test
-	public void advertisersNotNull() {
+	public void advertisersNotNull(){
 		assertNotNull(advertisers);
 	}
 	
